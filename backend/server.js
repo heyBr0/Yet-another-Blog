@@ -15,6 +15,11 @@ app.use((req, res, next) => {
   next();
 });
 
+app.use(express.json({ limit: "10mb", extended: true }));
+app.use(
+  express.urlencoded({ limit: "10mb", extended: true, parameterLimit: 50000 })
+);
+
 // routes
 app.use("/api/blogs", blogRoutes);
 app.use("/api/user", userRoutes);

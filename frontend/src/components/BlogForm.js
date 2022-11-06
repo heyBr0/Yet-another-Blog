@@ -8,9 +8,29 @@ const BlogForm = () => {
 
   const [title, setTitle] = useState("");
   const [text, setText] = useState("");
+  const [imgFile, uploading] = useState([]);
 
   const [error, setError] = useState(null);
   const [emptyFields, setEmptyFields] = useState([]);
+
+  const getBase64 = (file) => {
+    let reader = new FileReader();
+    reader.readAsDataURL(file);
+    reader.onload = () => {
+      onLoad(reader.result);
+    };
+  };
+
+  const onChange = (e) => {
+    const files = e.target.files;
+    const file = files[0];
+    getBase64(file);
+  };
+
+  const onLoad = (fileString) => {
+    console.log(fileString);
+    uploading(fileString);
+  };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -19,7 +39,7 @@ const BlogForm = () => {
       return;
     }
 
-    const blog = { title, text };
+    const blog = { title, text, imgFile };
     const response = await fetch("/api/blogs", {
       method: "POST",
       body: JSON.stringify(blog),
@@ -36,6 +56,7 @@ const BlogForm = () => {
     if (response.ok) {
       setTitle("");
       setText("");
+      uploading([]);
       setError(null);
       setEmptyFields([]);
       console.log("new blog added", json);
@@ -61,7 +82,11 @@ const BlogForm = () => {
         value={text}
         className={emptyFields.includes("text") ? "error" : ""}
       />
-
+      <hr />
+      <h3>Picture Upload </h3>
+     
+      <p id="kilobyte">(max. file size: 60 kb)</p>
+      <input type="file" onChange={onChange} />
       <button>Add blog</button>
       {error && <div className="error">{error}</div>}
     </form>
