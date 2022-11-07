@@ -3,7 +3,7 @@ const express = require("express");
 const mongoose = require("mongoose");
 const blogRoutes = require("./routes/blogs");
 const userRoutes = require("./routes/user");
-
+const PORT = process.env.PORT || 4000;
 // express app
 const app = express();
 
@@ -29,13 +29,12 @@ mongoose
   .connect(process.env.MONGO_URI)
   .then(() => {
     // listen for requests
-    app.listen(process.env.PORT, () => {
-      console.log("connected to DB and listening on port", process.env.PORT);
+    app.listen(PORT, () => {
+      console.log("connected to DB and listening on port", PORT);
     });
   })
   .catch((error) => {
     console.log(error);
   });
 
-  // Export the Express API
-module.exports = app;
+ 
