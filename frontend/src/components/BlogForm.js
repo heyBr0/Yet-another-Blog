@@ -83,7 +83,7 @@ const BlogForm = () => {
         className={emptyFields.includes("text") ? "error" : ""}
       />
       <hr />
-      <h3>Picture Upload </h3>
+      <h3>Post Icon Upload </h3>
      
       <p id="kilobyte">(max. file size: 60 kb)</p>
       <input type="file" onChange={onChange} />

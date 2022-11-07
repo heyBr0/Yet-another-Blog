@@ -15,12 +15,13 @@ const Signup = () => {
   return (
     <form className="signup" onSubmit={handleSubmit}>
       <h3>Sign up</h3>
-      <label>Email:</label>
+      <label>Email*:</label>
       <input
         type="email"
         onChange={(e) => setEmail(e.target.value)}
         value={email}
       />
+        <p id="italic">*use any fake email for test purposes</p>
       <label>Password:</label>
       <input
         type="password"

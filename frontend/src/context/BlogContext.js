@@ -12,13 +12,7 @@ export const blogReducer = (state, action) => {
       return {
         blogs: [action.payload, ...state.blogs],
       };
- /*    case "EDIT_BLOG":
-      return {
-        blogs: state.blogs.map((blog) =>
-          blog._id === action.payload._id ? action.payload : blog
-        ),
-      };
- */
+
     case "DELETE_BLOG":
       return {
         blogs: state.blogs.filter((item) => item._id !== action.payload._id),

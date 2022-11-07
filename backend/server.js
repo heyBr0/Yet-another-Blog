@@ -36,3 +36,6 @@ mongoose
   .catch((error) => {
     console.log(error);
   });
+
+  // Export the Express API
+module.exports = app;

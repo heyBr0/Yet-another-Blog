@@ -27,8 +27,8 @@ const BlogDetails = ({ blog }) => {
 
   return (
     <div className="blog-details">
-      <h4>{blog.title}</h4>
-      <img className="textImage" src={blog.imgFile} alt="pic" />
+      <h4>{blog.title}</h4>    
+      <img className="textImage" src={blog.imgFile} alt="" />  
       <p className="textDetails">{blog.text}</p>
 
       <p>
