@@ -1,3 +1,9 @@
 # MERN-app-test
 
-Working Full Stack App with back-end token authentication, login/logout/sign-up features and Mongo DB database
+Working Full Stack App with:
+-token authentication
+-login / logout / sign-up features
+-Mongo DB database
+-small pictures upload
+
+![blog preview image](/public/preview.jpg)
