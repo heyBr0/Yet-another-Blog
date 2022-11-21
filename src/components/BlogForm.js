@@ -40,7 +40,7 @@ const BlogForm = () => {
     }
 
     const blog = { title, text, imgFile };
-    const response = await fetch("/api/blogs", {
+    const response = await fetch("https://yet-another-blog-api.onrender.com/", {
       method: "POST",
       body: JSON.stringify(blog),
       headers: {
