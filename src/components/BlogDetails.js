@@ -12,7 +12,7 @@ const BlogDetails = ({ blog }) => {
     if (!user) {
       return;
     }
-    const response = await fetch("https://yet-another-blog-api.onrender.com/" + blog._id, {
+    const response = await fetch("/api/blogs/" + blog._id, {
       method: "DELETE",
       headers: {
         Authorization: `Bearer ${user.token}`,

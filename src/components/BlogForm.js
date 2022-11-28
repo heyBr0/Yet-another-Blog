@@ -28,7 +28,7 @@ const BlogForm = () => {
   };
 
   const onLoad = (fileString) => {
-    console.log(fileString);
+    /* console.log(fileString); */
     uploading(fileString);
   };
 
@@ -40,7 +40,7 @@ const BlogForm = () => {
     }
 
     const blog = { title, text, imgFile };
-    const response = await fetch("https://yet-another-blog-api.onrender.com/", {
+    const response = await fetch("/api/blogs", {
       method: "POST",
       body: JSON.stringify(blog),
       headers: {

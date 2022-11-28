@@ -10,7 +10,7 @@ const Home = () => {
 
   useEffect(() => {
     const fetchBlogs = async () => {
-      const response = await fetch("https://yet-another-blog-api.onrender.com/", {
+      const response = await fetch("/api/blogs", {
         headers:{
           "Authorization": `Bearer ${user.token}`
         }
