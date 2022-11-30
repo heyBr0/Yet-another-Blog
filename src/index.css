@@ -2,18 +2,21 @@
 
 /* layout */
 :root {
-  --primary: #1aac83;
-  --error: #e7195a;
-  --normal: #b8dbd9;
+  --primary: rgb(160, 221, 159);
+  --error: #da471b;
+  --normal: #a679cf;
 }
 
 body {
-  background: #f4f4f9;
+  background: url("./background/ezgif.png");
+  background-position: center;
+  background-repeat: repeat;
+  background-size: cover;
   margin: 0;
   font-family: "Poppins";
 }
 header {
-  background: var(--normal);
+  background: var(--primary);
 }
 header .container {
   max-width: 1400px;
@@ -41,6 +44,7 @@ header a {
 }
 .blog-details {
   background: #fff;
+  border: 1px solid var(--primary);
   border-radius: 4px;
   margin: 20px auto;
   padding: 20px;
@@ -51,7 +55,7 @@ header a {
 .blog-details h4 {
   margin: 0 0 10px 0;
   font-size: 1.2em;
-  color: var(--primary);
+  color: var(--normal);
 }
 .blog-details p {
   margin: 0;
@@ -95,7 +99,7 @@ textarea {
 }
 
 form button {
-  background: var(--primary);
+  background: var(--normal);
   border: 0;
   color: #fff;
   padding: 10px;
@@ -106,7 +110,7 @@ form button {
 form button:hover {
   background-color: #f4f4f9;
   color: black;
-  border: 1px solid var(--primary);
+  border: 1px solid var(--normal);
 }
 div.error {
   padding: 10px;
@@ -130,9 +134,9 @@ nav button {
   margin-left: 10px;
 }
 nav button {
-  background: #fff;
-  color: var(--primary);
-  border: 2px solid var(--primary);
+  background: var(--normal);
+  color: white;
+  border: 2px solid var(--normal);
   padding: 6px 10px;
   border-radius: 4px;
   font-family: "Poppins";
@@ -140,8 +144,9 @@ nav button {
   font-size: 1em;
 }
 nav button:hover {
-  background-color: var(--error);
-  color: white;
+  background-color: #f4f4f9;
+  color: black;
+  border: 1px solid var(--normal);
 }
 
 /* auth forms */
