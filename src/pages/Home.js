@@ -27,13 +27,14 @@ const Home = () => {
   }, [dispatch, user]);
   return (
     <div className="home">
+           <BlogForm />
       <div className="blogs">
         {blogs &&
           blogs.map((blog) => (
             <BlogDetails key={blog._id} blog={blog} />
           ))}
       </div>
-      <BlogForm />
+ 
     </div>
   );
 };

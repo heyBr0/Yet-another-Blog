@@ -11,13 +11,14 @@ body {
   background: url("./background/ezgif.png");
   background-position: center;
   background-repeat: repeat;
-  background-size: cover;
+  /*   background-size:cover; */
   margin: 0;
   font-family: "Poppins";
 }
 header {
   background: var(--primary);
 }
+
 header .container {
   max-width: 1400px;
   margin: 0 auto;
@@ -39,7 +40,7 @@ header a {
 /* homepage */
 .home {
   display: grid;
-  grid-template-columns: 3fr 1fr;
+  grid-template-columns: 1fr 3fr;
   gap: 100px;
 }
 .blog-details {
@@ -92,6 +93,7 @@ textarea {
   border: 1px solid #ddd;
   border-radius: 4px;
   box-sizing: border-box;
+  border: 1px solid var(--normal);
 }
 
 textarea {
@@ -176,4 +178,21 @@ form.login {
 #italic {
   font-style: italic;
   font-size: 0.8rem;
+}
+
+@media (max-width: 768px) {
+  #headerButtons {
+    display: grid;
+  }
+
+  #headerButtons button {
+    width: 50%;
+    margin: 0.5rem 25%;
+  }
+
+  .home {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
 }
