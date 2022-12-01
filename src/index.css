@@ -195,4 +195,7 @@ form.login {
     grid-template-columns: 1fr;
     gap: 10px;
   }
+  textarea {
+    min-height: 300px;
+  }
 }
